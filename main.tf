@@ -14,7 +14,7 @@ resource "kubernetes_deployment" "nginx" {
     namespace = kubernetes_namespace.demo.metadata[0].name
   }
   spec {
-    replicas = 1
+    replicas = 3
     selector {
       match_labels = {
         app = "nginx"
